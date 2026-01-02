@@ -1,0 +1,154 @@
+/* Shell tweaks to align with your auth card look */
+.owner-card-shell {
+    max-width: 980px;
+    padding: 26px 24px;
+  }
+  
+  .owner-h1 { text-align: center; margin: 6px 0 4px; }
+  
+  /* Responsive grid of tiles */
+  .owner-grid {
+    margin-top: 14px;
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  
+  .owner-card {
+    background: rgba(255,255,255,.92);
+    border: 1px solid rgba(255,255,255,.55);
+    border-radius: 14px;
+    box-shadow: 0 12px 34px rgba(0,0,0,.12);
+    padding: 16px 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .owner-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.18);
+  }
+  .owner-card:focus { outline: 2px solid #3b82f6; outline-offset: 2px; }
+  
+  .owner-card-icon { font-size: 22px; margin-bottom: 2px; }
+  .owner-card-title { font-weight: 700; margin-bottom: 2px; }
+  .owner-card-blurb { color: #475569; font-size: 13px; }
+  
+  /* footer bar */
+  .owner-actions {
+    display: flex; align-items: center; gap: 10px;
+    margin-top: 16px; padding-top: 10px; border-top: 1px dashed #e5e7eb;
+  }
+  
+  /* simple modal */
+  .owner-modal {
+    position: fixed; inset: 0; background: rgba(15,23,42,.35);
+    display: grid; place-items: center; z-index: 50;
+  }
+  .owner-modal-content {
+    width: min(92vw, 440px);
+    background: #fff; border-radius: 14px; padding: 18px 16px;
+    box-shadow: 0 24px 64px rgba(0,0,0,.28);
+  }
+  .table-wrap { overflow-x: auto; }
+.table {
+  width: 100%; border-collapse: collapse; background: #fff;
+  border-radius: 12px; overflow: hidden; box-shadow: 0 10px 28px rgba(0,0,0,.08);
+}
+.table thead tr { background: #111827; color: #fff; }
+.table th, .table td { padding: 10px 12px; text-align: left; }
+.table tbody tr:nth-child(even) { background: #f8fafc; }
+
+.input {
+  padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; margin-left: 8px;
+}
+.chip-group .chip { margin-right: 6px; }
+.chip { padding: 8px 12px; border-radius: 999px; border: 1px solid #cbd5e1; background:#fff; cursor:pointer; }
+.chip-active { background: #111827; color: #fff; border-color:#111827; }
+
+.btn-small { padding: 6px 10px; font-size: 13px; }
+.btn-danger { background: #ef4444; color: #fff; border: 1px solid #ef4444; }
+.btn-danger:hover { filter: brightness(0.95); }
+/* styles/owner.css (add if missing) */
+.btn-small { padding: 6px 10px; font-size: 12px; }
+.btn-danger { background: #ef4444; color: #fff; border-color: #ef4444; }
+.btn-danger:hover { filter: brightness(.95); }
+
+.table-wrap { overflow-x: auto; }
+/* clickable row cue */
+.owner-row-clickable {
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.owner-row-clickable:hover {
+  background-color: #f9fafb;
+}
+.owner-row-clickable:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: -2px;
+}
+
+/* helper hint */
+.owner-hint {
+  margin: 8px 0 10px;
+  font-size: 13px;
+  color: #475569;
+}
+
+/* modal improvements (reuse your existing .owner-modal styles) */
+.owner-modal-wide {
+  width: min(92vw, 720px);
+}
+
+.owner-modal-x {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.owner-modal-title {
+  margin: 2px 0 12px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.owner-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 14px;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.owner-modal-span {
+  grid-column: 1 / -1;
+}
+
+.owner-modal-block {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.owner-modal-block-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.owner-modal-block-text {
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.owner-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+}
