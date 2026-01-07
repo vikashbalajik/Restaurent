@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/customerPages.css";
+import { API_BASE } from "../apiBase";
+
 
 import {
   getCustomerUser,
@@ -103,7 +105,11 @@ export default function Login() {
     try {
       setLoading(true);
 
-      const endpoint = mode === "register" ? "/api/auth/register" : "/api/auth/login";
+      const endpoint =
+  mode === "register"
+    ? `${API_BASE}/api/auth/register`
+    : `${API_BASE}/api/auth/login`;
+
       let payload;
 
       if (mode === "register") {
